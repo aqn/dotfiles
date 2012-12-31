@@ -246,6 +246,6 @@ set viewoptions=cursor,folds,slash,unix
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>ga :Gwrite<CR>
-nnoremap <Leader>gl :GLog<CR>
+nnoremap <Leader>gl :Glog<CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gd :Gdiff<CR>
