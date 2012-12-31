@@ -163,6 +163,7 @@ endif
 noremap <C-U><C-H> :Unite help<CR>
 noremap <C-U><C-M> :Unite mark<CR>
 noremap <C-U><C-D> :Unite directory_mru<CR>
+noremap <C-U><C-Q> :Unite quickfix<CR>
 noremap <C-U>u :UniteResume<CR>
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
