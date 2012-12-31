@@ -6,6 +6,7 @@ INSTALL
 ------------------------------------------------------------------------------
 
 :: 
+
   $ git clone git://github.com/aqn/dotfiles.git
   $ sh dotfiles/setup.sh
   $ vim
