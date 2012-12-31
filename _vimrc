@@ -242,3 +242,10 @@ let g:quickrun_config['rst'] = {
 " restore_view recommended settings
 set viewoptions=cursor,folds,slash,unix
 " let g:skipview_files = ['*\.vim']
+
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>ga :Gwrite<CR>
+nnoremap <Leader>gl :GLog<CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gd :Gdiff<CR>
