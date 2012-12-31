@@ -1,0 +1,11 @@
+export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:${PATH}"
+export PATH="${PATH}:/opt/AWS-ElasticBeanstalk-CLI/eb/macosx/python2.7"
+
+# miscellaneous python settings
+export PYTHONSTARTUP=$HOME/.pythonrc
+export WORKON_HOME=$HOME/.venv
+export VIRTUALENVWRAPPER_VIRTUALENV=virtualenv-2.7
+export VIRTUALENV_USE_DISTRIBUTE=true
+export PIP_RESPECT_VIRTUALENV=true
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_DOWNLOAD_CACHE=${HOME}/.pip_cache

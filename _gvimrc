@@ -1,0 +1,10 @@
+colorscheme solarized
+
+set guifont=Osaka-Mono:h19
+"set transparency=10
+set columns=120
+set lines=40
+set visualbell
+
+" Insert modeを抜ける時にimをdisable
+set noimdisableactivate

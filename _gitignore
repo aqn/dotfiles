@@ -1,0 +1,8 @@
+*.pbxuser
+*.modelv3
+build/*
+
+.svn
+
+.DS_Store
+profile
