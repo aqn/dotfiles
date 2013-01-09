@@ -34,6 +34,8 @@ NeoBundle 'vim-scripts/DirDiff.vim'
 NeoBundle 'vim-scripts/VST'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'html5.vim'
+NeoBundle 'HTML5-Syntax-File'
 " Git
 NeoBundle 'tpope/vim-fugitive'
 " Python用
@@ -250,3 +252,16 @@ nnoremap <Leader>ga :Gwrite<CR>
 nnoremap <Leader>gl :Glog<CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gd :Gdiff<CR>
+
+" zencoding-vim
+let g:user_zen_settings = {
+\  'lang' : 'ja',
+\  'html' : {
+\    'filters' : 'html',
+\    'indentation' : ' '
+\  }
+\}
+
+" If you want to complete tags using |omnifunc| then add this.
+
+let g:use_zen_complete_tag = 1
