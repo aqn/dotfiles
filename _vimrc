@@ -265,3 +265,9 @@ let g:user_zen_settings = {
 " If you want to complete tags using |omnifunc| then add this.
 
 let g:use_zen_complete_tag = 1
+
+" common keymaps
+nmap k gk
+nmap j gj
+nmap <UP> gk
+nmap <DOWN> gj
