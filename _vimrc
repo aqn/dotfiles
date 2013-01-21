@@ -205,7 +205,6 @@ let g:vimshell_user_prompt = 'getcwd()'
 nnoremap  :VimShellPop .<CR>
 
 " misc
-set textwidth=78
 
 set nobackup
 set hidden
