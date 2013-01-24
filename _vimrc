@@ -270,3 +270,9 @@ nmap k gk
 nmap j gj
 nmap <UP> gk
 nmap <DOWN> gj
+
+""" Persistent undo
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000  " number of changes that can be undone
+set undoreload=10000 " number lines to save for undo on a buffer reload
