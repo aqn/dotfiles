@@ -205,8 +205,11 @@ let g:vimshell_user_prompt = 'getcwd()'
 nnoremap  :VimShellPop .<CR>
 
 " misc
-
-set nobackup
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set backupdir=~/.vim/backup
 set hidden
 set list
 " 記号の幅を直す
