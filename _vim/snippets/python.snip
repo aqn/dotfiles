@@ -1,32 +1,52 @@
 snippet addmodel
 options head
-        class ${1:model_name}(models.Model):
+	class ${1:model_name}(models.Model):
 
-                def __unicode__(self):
-                        return "%s" % (${2},)
+		def __unicode__(self):
+			return "%s" % (${2},)
 
 snippet mcf
-        models.CharField(max_length=${1})
+	models.CharField(max_length=${1})
 
 snippet mff
-        models.FileField(upload_to=${1})
-        ${2}
+	models.FileField(upload_to=${1})
+	${2}
 
 snippet mfpf
-        models.FilePathField(path=${1}, match="${2}", recursive=False)
-        ${2}
+	models.FilePathField(path=${1}, match="${2}", recursive=False)
+	${3}
+
 snippet mfloat
-        models.FloatField(max_digits=${1}, decimal_places=${2})
-        ${3}
+	models.FloatField(max_digits=${1}, decimal_places=${2})
+	${3}
 
 snippet mfk
-        models.ForeignKey(${1})
-        ${1}
+	models.ForeignKey(${1})
+	${2}
 
 snippet m2m
-        models.ManyToManyField(${1})
-        ${2}
+	models.ManyToManyField(${1})
+	${2}
 
 snippet o2o
-        models.OneToOneField(${1})
-        ${2}
+	models.OneToOneField(${1})
+	${2}
+
+snippet testcase
+options head
+	class ${1:TestClass}(unittest.TestCase):
+		def setUp(self):
+			${2}
+
+		def tearDown(self):
+			${3}
+
+snippet from_import
+options head
+	from ${1} import ${2}
+	${0}
+
+snippet with
+options word
+	with ${1} as ${2}:
+		${0}
