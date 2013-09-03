@@ -1,10 +1,15 @@
+set background=dark
+let g:solarized_contrast="high"    "default value is normal
 colorscheme solarized
-
-set guifont=Osaka-Mono:h19
+"set guifont=Osaka-Mono:h19
+"set guifont=Ricty\ Regular\ for\ Powerline
+"set guifont=Ricty\ Regular:h18
+set guifont=Osaka-Mono\ For\ Powerline:h19
+"set guifontwide=Osaka-Mono:h19
 "set transparency=10
 set columns=120
 set lines=40
-set visualbell
+set novisualbell
 
 " Insert modeを抜ける時にimをdisable
 set noimdisableactivate
