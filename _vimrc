@@ -312,7 +312,7 @@ noremap <C-U><C-G> :Unite grep<CR>
 " unite grep settings For ack.
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--no-heading --no-color -a'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_recursive_opt = ''
 endif
 " 全部
