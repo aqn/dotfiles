@@ -1,5 +1,5 @@
 #ANDROID_SDK_HOME="Documents/src/android-sdk-macosx"
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/local/lib/php/pear/bin:${PATH}"
+export PATH="/usr/local/bin:/opt/local/lib/php/pear/bin:${PATH}"
 export PATH="${PATH}:/opt/AWS-ElasticBeanstalk-CLI/eb/macosx/python2.7"
 export PATH="${PATH}:/usr/local/Cellar/php54/5.4.16/bin"
 #export PATH="${PATH}:$ANDROID_SDK_HOME/platform-tools"
@@ -14,3 +14,4 @@ export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_DOWNLOAD_CACHE=${HOME}/.pip_cache
 #export PHP_PEAR_PHP_BIN=/opt/local/bin/php
+export RBENV_ROOT=/usr/local/var/rbenv

@@ -29,3 +29,5 @@ export AWS_DEFAULT_REGION="ap-northeast-1"
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vimdiff=/Applications/MacVim.app/Contents/MacOS/vimdiff
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
