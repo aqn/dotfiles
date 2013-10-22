@@ -12,7 +12,7 @@ setlocal autoindent
 setlocal smartindent
 setlocal number
 
-set foldmethod=syntax
+setlocal foldmethod=syntax
 
 " スペースでfoldingを開けると便利
 nnoremap <buffer><space> za
