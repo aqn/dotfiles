@@ -35,11 +35,15 @@ alias ohmyzsh="mvim ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew git python pip svn osx github gitfast git-extras git-remote-branch svn history)
+plugins=(brew git python pip svn osx github gitfast git-extras \
+  git-remote-branch svn history virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 if [ -f $HOME/.zshrc.mine ]; then
+  source $HOME/.zshrc.mine
+fi
+if [ -f $HOME/.zshrc.private ]; then
   source $HOME/.zshrc.mine
 fi
