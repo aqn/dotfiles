@@ -4,17 +4,8 @@ export LANG=ja_JP.UTF-8
 fpath=(/usr/local/share/zsh-completions $fpath)
 compinit -i
 
-autoload zed
-
-# not used
-function tmuxnew()
-if  ! tmux has-session -t default 2>/dev/null ; then
-  exec tmux new-session -s default
-else
-  if [[ -z $TMUX  ]]; then
-    exec tmux attach -t default
-  fi
-fi
+autoload -Uz zed
+autoload -Uz zmv
 
 # JAVA OPTIONS
 # 文字化けする対策
