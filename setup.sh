@@ -1,9 +1,4 @@
-#! /bin/sh
-# 初期設定用やっつけスクリプト
-
-getNewName() { 
-  echo $1 | sed 's/^_/./'
-}
+#! /bin/zsh
 
 DOTFILESDIR="$HOME/dotfiles"
 
@@ -16,16 +11,13 @@ pushd $DOTFILESDIR
 for f in _*
 do
   if [ ! -f $f ]; then
-    # ディレクトリは飛ばします
     continue
   fi
-  newname=`getNewName $f`
-  [ ! -L $HOME/$newname ] &&
-    echo ln -s $DOTFILESDIR/$f $HOME/$newname
+  newname=`echo $f(:s/_/./)`
+  [ ! -L $HOME/$newname ] && ln -s $DOTFILESDIR/$f $HOME/$newname
 done
 
-ln -s $DOTFILESDIR/_vim/{after,snippets} \
-  $HOME/.vim
+ln -s $DOTFILESDIR/_vim/{after,snippets} $HOME/.vim
 
 popd
 
