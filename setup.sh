@@ -36,7 +36,8 @@ do
   link $DOTFILESDIR/$f $HOME/$newname
 done
 
-link $DOTFILESDIR/_vim/{after,snippets} $HOME/.vim
+link $DOTFILESDIR/_vim/after $HOME/.vim/after
+link $DOTFILESDIR/_vim/snippets $HOME/.vim/snippets
 
 popd
 
