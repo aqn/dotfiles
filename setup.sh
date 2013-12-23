@@ -1,9 +1,28 @@
-#! /bin/zsh
+#! /usr/bin/env zsh
+
+autoload colors
+colors
+
+success() {
+  print -P '%F{green}'$1
+}
+
+fail() {
+  print -P '%F{red}'$1
+}
+
+link() {
+  from="$1"
+  to="$2"
+  echo "Linking '$from' to '$to'"
+  rm -rf "$to"
+  ln -s "$from" "$to"
+}
 
 DOTFILESDIR="$HOME/dotfiles"
 
 if [ ! -d $DOTFILESDIR ]; then
-  echo "$DOTFILESDIR not found. abort."
+  fail "$DOTFILESDIR not found. abort."
   exit 1
 fi
 
@@ -14,11 +33,11 @@ do
     continue
   fi
   newname=`echo $f(:s/_/./)`
-  [ ! -L $HOME/$newname ] && ln -s $DOTFILESDIR/$f $HOME/$newname
+  link $DOTFILESDIR/$f $HOME/$newname
 done
 
-ln -s $DOTFILESDIR/_vim/{after,snippets} $HOME/.vim
+link $DOTFILESDIR/_vim/{after,snippets} $HOME/.vim
 
 popd
 
-echo "done."
+success "install dotfiles successfully done."
