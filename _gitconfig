@@ -1,0 +1,45 @@
+[user]
+	email = takahashi@3-ize.jp
+	name = Akiyuki Takahashi
+[core]
+	excludesfile = /Users/aqn/.gitignore
+	editor = mvim -f
+	autocrlf = input
+[gui]
+	recentrepo = /Users/aqn/Documents/src/oatool
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[push]
+	default = simple
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+	keepBackup = true
+[merge]
+	tool = Kaleidoscope
+	ff = false
+[credential]
+	helper = osxkeychain
+[credential "https://redmine.3-ize.jp"]
+	username = takahashi
+[http]
+	sslVerify = false
+[pull]
+	rebase = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
