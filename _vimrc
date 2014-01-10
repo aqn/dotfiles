@@ -337,30 +337,11 @@ nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
 "現在開いているバッファをIDE風に開く
 nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
 "}}}!vimfilers
-
-"----------------------------------------------------------------------------
-" showmarks
-"----------------------------------------------------------------------------
-" Enable ShowMarks
-" let showmarks_enable = 1
-" Show which marks
-" let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-"help、quickfixと編集不可のバッファについて、マークを表示しない。-
-" let showmarks_ignore_type = "hqm"
-
-" showmarks keyconfig
-" map <Leader>mt :DoShowMarks<CR>
-" map <Leader>mn :NoShowMarks<CR>
-" nnoremap ` :ShowMarksOnce<CR>
-"----------------------------------------------------------------------------
-
 "{{{!vimshell
 "let g:vimshell_prompt='% '
 "let g:vimshell_user_prompt = 'getcwd()'
 "nnoremap  :VimShellPop .<CR>
 "}}}!vimshell
-
-
 " バッファを開いた時、バッファローカルのcdを変更する
 " autocmd BufEnter * silent! lcd %:p:h
 " バッファローカルのcdを変更
