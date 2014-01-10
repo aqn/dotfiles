@@ -1,7 +1,5 @@
 set nocompatible
-"----------------------------------------------------------------------------
-" neobundle
-"----------------------------------------------------------------------------
+"{{{!neobundle
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -257,7 +255,11 @@ NeoBundleLazy 'shawncplus/phpcomplete.vim', {
     \ 'autoload' : {
     \ 'filetypes' : ['php'],
     \ }}
-
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kana/vim-textobj-indent' , {
+    \' depends' : 'kana/vim-textobj-user'
+    \ }
+NeoBundle 'tpope/vim-fugitive'
 
 syntax on
 filetype plugin indent on
@@ -268,33 +270,31 @@ filetype plugin indent on
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
 NeoBundleCheck
-"----------------------------------------------------------------------------
+"}}}!neobundle
+
 " release autogroup in vimrc_cmd
 augroup vimrc_cmd
   autocmd!
 augroup END
 
+"{{{!dll settings
 " MacVimでのDLL設定
 "let $PYTHON_DLL = "/opt/local/lib/libpython2.7.dylib"
 "let $RUBY_DLL = "~/.rbenv/versions/2.0.0-p0/lib/libruby.dylib"
 let $LUA_DLL = "/usr/local/Cellar/lua52/5.2.1/lib/liblua.dylib"
+"}}}!dll settings
 
 " ファイルエンコーディングの自動検出
 if has("kaoriya")
   set fileencodings=guess
 endif
 
-"----------------------------------------------------------------------------
-" neosnippet
-"----------------------------------------------------------------------------
-
+"{{{!neosnippet
 " Enable snipMate compatibility feature.
 " let g:neosnippet#enable_snipmate_compatibility = 1
-"----------------------------------------------------------------------------
+"}}}!neosnippet
 
-"----------------------------------------------------------------------------
-" unite.vim
-"----------------------------------------------------------------------------
+"{{{!unite
 " 入力モードで開始する
 let g:unite_enable_start_insert=1
 " バッファ一覧
@@ -327,17 +327,16 @@ nnoremap <silent><C-U><C-O> :Unite -no-quit -vertical -winwidth=30 outline<CR>
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 "----------------------------------------------------------------------------
+"}}}!unite
 
-"----------------------------------------------------------------------------
-" vimfiler
-"----------------------------------------------------------------------------
+"{{{!vimfiler
 " vimfilerをデフォルトにする
 let g:vimfiler_as_default_explorer = 1
 "現在開いているバッファのディレクトリを開く
 nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
 "現在開いているバッファをIDE風に開く
 nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
-"----------------------------------------------------------------------------
+"}}}!vimfilers
 
 "----------------------------------------------------------------------------
 " showmarks
@@ -355,10 +354,11 @@ nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35
 " nnoremap ` :ShowMarksOnce<CR>
 "----------------------------------------------------------------------------
 
-" vimshell
-let g:vimshell_prompt='% '
-let g:vimshell_user_prompt = 'getcwd()'
-nnoremap  :VimShellPop .<CR>
+"{{{!vimshell
+"let g:vimshell_prompt='% '
+"let g:vimshell_user_prompt = 'getcwd()'
+"nnoremap  :VimShellPop .<CR>
+"}}}!vimshell
 
 
 " バッファを開いた時、バッファローカルのcdを変更する
@@ -378,14 +378,11 @@ let g:indent_guides_enable_on_vim_startup = 1
 " set viewoptions=cursor,folds,slash,unix
 " let g:skipview_files = ['*\.vim']
 
-nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gc :Gcommit<CR>
-nnoremap <Leader>ga :Gwrite<CR>
-nnoremap <Leader>gl :Glog<CR>
-nnoremap <Leader>gb :Gblame<CR>
-nnoremap <Leader>gd :Gdiff<CR>
+"{{{!syntastic
+let g:syntastic_php_checkers=['php', 'phpmd', 'phpcs']
+"}}}!syntastic
 
-" zencoding-vim
+"{{{!zencoding-vim
 let g:user_zen_settings = {
       \  'lang' : 'ja',
       \  'html' : {
@@ -397,22 +394,24 @@ let g:user_zen_settings = {
 " If you want to complete tags using |omnifunc| then add this.
 
 let g:use_zen_complete_tag = 1
+"}}}!zencoding-vim
 
-" common keymaps
+"{{{!common keymaps
 nmap k gk
 nmap j gj
 nmap <UP> gk
 nmap <DOWN> gj
+"}}}!common keymaps
 
-""" Persistent undo
+"{{{!Persistent undo
 set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000  " number of changes that can be undone
 set undoreload=10000 " number lines to save for undo on a buffer reload
+"}}}!Persistent undo
 
-let g:syntastic_php_checkers=['php', 'phpmd', 'phpcs']
 
-" misc
+"{{{!misc
 set ignorecase          " 大文字小文字を区別しない
 set smartcase           " 検索文字に大文字がある場合は大文字小文字を区別
 set incsearch           " インクリメンタルサーチ
@@ -460,6 +459,7 @@ nnoremap g* g*zz
 nnoremap g# g#zz
 
 runtime macros/matchit.vim
+"}}}!misc
 
 " make, grep などのコマンド後に自動的にQuickFixを開く
 " autocmd vimrc_cmd QuickfixCmdPost * copen
