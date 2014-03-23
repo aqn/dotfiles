@@ -36,7 +36,7 @@ alias ohmyzsh="mvim ~/.oh-my-zsh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew git python pip svn osx github gitfast git-extras \
-  git-remote-branch svn history virtualenvwrapper sudo)
+  git-remote-branch svn history virtualenvwrapper sudo colorize)
 
 source $ZSH/oh-my-zsh.sh
 

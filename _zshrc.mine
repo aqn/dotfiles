@@ -6,12 +6,15 @@ compinit -i
 
 autoload -Uz zed
 autoload -Uz zmv
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
 
 # JAVA OPTIONS
 # 文字化けする対策
 export JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 export MAVEN_OPTS=-Dfile.encoding=UTF-8
-export JAVA_HOME=/Library/Java/Home/
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # EDITOR settings
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
