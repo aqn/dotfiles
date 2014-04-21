@@ -34,7 +34,7 @@
 [credential "https://redmine.3-ize.jp"]
 	username = takahashi
 [http]
-	sslVerify = false
+	sslverify = true
 [pull]
 	rebase = true
 [difftool "sourcetree"]
