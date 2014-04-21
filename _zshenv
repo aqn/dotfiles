@@ -17,3 +17,4 @@ export PIP_DOWNLOAD_CACHE=${HOME}/.pip_cache
 #export PHP_PEAR_PHP_BIN=/opt/local/bin/php
 export RBENV_ROOT=/usr/local/var/rbenv
 export PERL5LIB=$PERL5LIB:/Users/aqn/perl5/lib/perl5
+export SSH_AUTH_SOCK=$(launchctl getenv SSH_AUTH_SOCK)
