@@ -176,6 +176,7 @@ endfunction
 NeoBundleLazy 'thinca/vim-ref', {
       \ "autoload": {
       \ "commands": ["Ref"],
+      \ "mappings": ["K"],
       \ "unite_sources": ["ref"],
       \ }}
 let s:hooks = neobundle#get_hooks("vim-ref")
