@@ -129,6 +129,12 @@ NeoBundleLazy "Shougo/unite.vim", {
       \ "autoload": {
       \   "commands": ["Unite", "UniteWithBufferDir"]
       \ }}
+NeoBundleLazy "Shougo/neomru.vim", {
+      \ "autoload": {
+      \   "unite_sources": [
+      \     "file_mru", "directory_mru", "neomru/file", "neomru/directory"
+      \   ],
+      \ }}
 NeoBundleLazy 'h1mesuke/unite-outline', {
       \ "autoload": {
       \   "unite_sources": ["outline"],
